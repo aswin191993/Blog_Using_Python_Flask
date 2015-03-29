@@ -1,0 +1,18 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    <h1>Welcome To Student Data Record</h1>
+    <table class="table table-hover">
+        <tbody>
+	    {% for c in values %}
+	    <tr>
+                <th>{{c[0]}}</th>
+                <th>{{c[1]}}</th>
+	    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}
